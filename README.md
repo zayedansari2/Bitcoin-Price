@@ -1,6 +1,6 @@
 Real-Time Bitcoin Price Tracker
 
-A Java-based application that tracks the real-time price of Bitcoin using an API. This app fetches the current Bitcoin price and updates it periodically, giving users the latest market data at their fingertips.
+- A Java-based application that tracks the real-time price of Bitcoin using an API. This app fetches the current Bitcoin price and updates it periodically, giving users the latest market data at their fingertips.
 
 Features:
 - Real-time Bitcoin Price: Fetches and displays the current Bitcoin price in USD.
