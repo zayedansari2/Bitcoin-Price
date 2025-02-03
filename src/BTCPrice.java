@@ -3,6 +3,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import java.util.Scanner;
 
 public class BTCPrice {
 
@@ -40,10 +41,20 @@ public class BTCPrice {
     }
 
     public static void main(String[] args) {
-        try {
-            GetPrice();
-        } catch (Exception e) {
-            System.out.println("Error retrieving Bitcoin price: " + e.getMessage());
-        }
+        Scanner scanner = new Scanner(System.in);
+        String input = "";
+
+        do {
+            try {
+                GetPrice();
+            } catch (Exception e) {
+                System.out.println("Error retrieving Bitcoin price: " + e.getMessage());
+            }
+
+            System.out.print("Would you like to refresh the price? (Y/N): ");
+            input = scanner.nextLine();
+        } while (input.equalsIgnoreCase("Y"));
+
+        scanner.close();
     }
 }
